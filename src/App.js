@@ -12,7 +12,7 @@ function App() {
         { id: 3, name: 'wafaa', email: 'wafaa@email.com', age: 32 },
         { id: 4, name: 'safaa', email: 'safaa@email.com', age: 33 },
       ],
-      carouselOption: { pagination: false, slidesPerView: 3 },
+      carouselOption: { pagination: true, slidesPerView: 5, navigation: true },
     },
     {
       componentName: ShapOne,
@@ -22,7 +22,7 @@ function App() {
         { id: 3, name: 'wafaa', email: 'wafaa@email.com', age: 32 },
         { id: 4, name: 'safaa', email: 'wafaa@email.com', age: 32 },
       ],
-      carouselOption: { pagination: false, slidesPerView: 3 },
+      carouselOption: { pagination: false, slidesPerView: 3, navigation: true },
     },
   ];
   const swiper = list.map((el, idx) => {

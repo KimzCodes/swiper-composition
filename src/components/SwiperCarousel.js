@@ -16,8 +16,8 @@ const Swipercarousel = ({
   slidesPerView,
   navigation,
 }) => {
-  const cloneItem = items.map((el) => (
-    <SwiperSlide>
+  const cloneItem = items.map((el, idx) => (
+    <SwiperSlide key={idx}>
       {React.cloneElement(children, { item: el, key: el.id })}
     </SwiperSlide>
   ));
@@ -26,7 +26,7 @@ const Swipercarousel = ({
       spaceBetween={30}
       slidesPerView={slidesPerView ? slidesPerView : 3}
       pagination={pagination ? pagination : false}
-      navigation={navigation ? navigation : true}
+      navigation={navigation ? navigation : false}
     >
       {cloneItem}
     </Swiper>
