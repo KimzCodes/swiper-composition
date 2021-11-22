@@ -6,13 +6,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  padding: 0;
-}
-
 .shapeOne {
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   background-color: #93b7be;
   border: 3px solid #554348;
   border-radius: 50%;
@@ -23,8 +19,8 @@ body {
 }
 
 .shapeTwo {
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   background-color: #93b7be;
   border: 3px solid #554348;
   border-radius: 10px;
