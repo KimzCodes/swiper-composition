@@ -1,15 +1,6 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation } from 'swiper/core';
-
-import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css';
-import 'swiper/components/navigation/navigation.min.css';
-import './swiper.css';
-
-SwiperCore.use([Pagination, Navigation]);
-// import ShapOne from './components/ShapOne';
-// import ShapTwo from './components/ShapTwo';
+import SwiperCarousel from './components/SwiperCarousel';
+import ShapOne from './components/ShapOne';
+import ShapTwo from './components/ShapTwo';
 
 function App() {
   const userData = [
@@ -26,12 +17,13 @@ function App() {
 
   return (
     <div className='App'>
-      <Swiper spaceBetween={30} slidesPerView={3} navigation pagination>
-        <SwiperSlide>1</SwiperSlide>
-        <SwiperSlide>2</SwiperSlide>
-        <SwiperSlide>3</SwiperSlide>
-        <SwiperSlide>4</SwiperSlide>
-      </Swiper>
+      <SwiperCarousel items={userData}>
+        <ShapOne />
+      </SwiperCarousel>
+
+      <SwiperCarousel items={userData}>
+        <ShapTwo />
+      </SwiperCarousel>
     </div>
   );
 }
